@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <button onclick="roll1(); roll2();">Refresh Me</button>
+    <h2 id="result"></h2>
+
+    <div class="dice-container">
+      
+      <div class="dice">
+          <p>Player 1</p>
+          <img id="img1" src="images/dice6.png">
+      </div>
+
+      <div class="dice">
+          <p>Player 2</p>
+          <img id="img2" src="images/dice6.png">
+      </div>
+
+    </div>
+
+<script>
+  function roll1(){
+    const roll1 = (Math.floor(Math.random()*6))+1;
+    const randomImageSource1 = 'images/dice' + roll1 +'.png';
+    randomImageSource2 = String(randomImageSource1)
+    document.getElementById('img1').src= randomImageSource2;
+  }
+
+  function roll2(){
+    const roll2 = (Math.floor(Math.random()*6))+1;
+    const randomImageSource3 = 'images/dice' + roll2 +'.png';
+    randomImageSource4 = String(randomImageSource3)
+    document.getElementById('img2').src= randomImageSource4;
+  }
+
+</script>
+
+</body>
+
+<footer>
+  <a href="https://www.iamvineeth.com/">visit iamvineeth.com for more such projects</a>
+</footer>
+
+</html>
